@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="liquidity-coverage-ratio" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="452176f6-ee37-4161-bc92-d4eef55e5480">
+	<property name="ireport.zoom" value="1.6105100000000327"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\Java\\workspace-jasper\\"]]></defaultValueExpression>
+	</parameter>
+	<field name="totalWeightedValueHQLA" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="3" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="34" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="984b7276-f5ac-4e03-8ad1-dd6d68f03a55"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="0" width="548" height="33" uuid="9ce49acb-2aeb-4e2e-aca7-37c338e59837"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="11"/>
+				</textElement>
+				<text><![CDATA[LCR common disclosure template]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="33" width="555" height="1" uuid="acf2d101-dd98-483a-8783-dc3c2572f890"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="296" y="5" width="129" height="26" uuid="73bf4d0c-9ed5-497f-8438-0be325966d13"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[TOTAL UNWEIGHTED VALUE
+(average)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="426" y="5" width="129" height="26" uuid="3e987cf5-9b10-4e02-a2ad-344b25794d84"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[TOTAL WEIGHTED VALUE
+(average)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="425" y="0" width="1" height="31" uuid="2321843f-fe50-4623-b20c-77a14f5e40a7"/>
+			</line>
+			<line>
+				<reportElement x="295" y="0" width="1" height="31" uuid="aa534839-dbb4-4ad5-812b-926a83ecf6d3"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="18" width="100" height="13" uuid="fe21050e-bba5-4035-9c37-2570bcda5d28"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[(In local currency)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="30" width="555" height="1" uuid="8edbf38a-f0e3-4103-8d62-7cece6eb7737"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="687" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="18" forecolor="#FFFFFF" backcolor="#B2B2B2" uuid="a42f4520-d6fd-4bd8-ba2f-1b96b1ca06d8"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="7" y="0" width="548" height="18" uuid="fdc5cd10-ffb5-4d4f-836d-659e827f48ac"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HIGH-QUALITY LIQUID ASSETS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="17" width="555" height="1" uuid="447d2e0f-2d77-4d07-8208-6d4e232039d9"/>
+			</line>
+			<rectangle>
+				<reportElement x="0" y="18" width="555" height="23" backcolor="#D9D9D9" uuid="e31e0c4d-c850-4714-94f7-05a5bf68a25e"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="7" y="18" width="21" height="22" uuid="ccb14231-2b3c-46f5-a346-947c144c6092"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<line>
+				<reportElement x="28" y="18" width="1" height="22" uuid="78bcd9c5-055c-428a-9865-e0b9718c0a05"/>
+			</line>
+			<line>
+				<reportElement x="0" y="40" width="555" height="1" uuid="3a86cb7c-37e0-4213-a48e-ec6f240a5051"/>
+			</line>
+			<line>
+				<reportElement x="425" y="18" width="1" height="22" uuid="52b45083-4b3a-4863-a287-bf27aacf4815"/>
+			</line>
+			<line>
+				<reportElement x="295" y="18" width="1" height="22" uuid="bef39f39-c901-4490-8e60-95ad1f3ebd0d"/>
+			</line>
+			<staticText>
+				<reportElement x="36" y="18" width="259" height="23" uuid="53bef6ba-504e-455b-b612-2ca957546c5a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[Total high-quality liquid assets (HQLA)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="41" width="555" height="18" forecolor="#FFFFFF" backcolor="#B2B2B2" uuid="463f3792-9fec-4390-990f-dad50a0239e9"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="7" y="41" width="548" height="18" uuid="7ef3d111-739c-4943-a83e-2a5de0c3189f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CASH OUTFLOWS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="58" width="555" height="1" uuid="77836268-2650-4924-b873-02d17ed87f3b"/>
+			</line>
+			<rectangle>
+				<reportElement x="0" y="59" width="555" height="23" backcolor="#D9D9D9" uuid="47baddc9-e182-443d-97c6-a4a4a0548f6a"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="7" y="59" width="21" height="22" uuid="9a9520d1-94f2-41ae-bf24-d7df0dc101dd"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<line>
+				<reportElement x="28" y="59" width="1" height="22" uuid="7c245a81-e191-47bf-bc2a-6374e233f0fc"/>
+			</line>
+			<line>
+				<reportElement x="425" y="59" width="1" height="22" uuid="19988a5d-8325-4547-a411-9ded98e203aa"/>
+			</line>
+			<line>
+				<reportElement x="295" y="59" width="1" height="22" uuid="8deb649c-c0d8-4cbe-b45c-f07803298b05"/>
+			</line>
+			<staticText>
+				<reportElement x="36" y="59" width="259" height="23" uuid="ddba0cac-c076-41a7-b220-1534ca6c2789"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[Retail deposits and deposits from small business customers, of which: ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="81" width="555" height="1" uuid="7b2dfede-5a14-4ea1-b003-f33e064af400"/>
+			</line>
+			<rectangle>
+				<reportElement x="0" y="82" width="555" height="23" backcolor="#FFFFFF" uuid="62ed73d8-08df-4adc-b140-9d24d9ed53c7"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="104" width="555" height="1" uuid="0eda8f28-5632-49d0-a70a-181edc4f967f"/>
+			</line>
+			<line>
+				<reportElement x="295" y="81" width="1" height="23" uuid="adff6997-cb6e-449f-a7aa-6f40575ac581"/>
+			</line>
+			<line>
+				<reportElement x="425" y="81" width="1" height="23" uuid="bb0ef774-49e7-4020-b2cd-35bd378662b6"/>
+			</line>
+			<line>
+				<reportElement x="28" y="82" width="1" height="22" uuid="fb36842c-bf84-4e33-bd8c-58f616357b3d"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="82" width="21" height="22" uuid="f44d196c-91ea-4621-a383-3ef4a4005ff4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="82" width="259" height="23" uuid="11b1ccaf-5c9d-4125-b79b-29141217a18c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Stable deposits]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="105" width="555" height="23" backcolor="#FFFFFF" uuid="917231f7-5005-4578-bceb-bdfcac313f28"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="127" width="555" height="1" uuid="f5131824-6c72-4d13-b87b-b00aa5b74936"/>
+			</line>
+			<line>
+				<reportElement x="295" y="104" width="1" height="23" uuid="e73c21bb-7b93-4937-8226-7f2d2122ec91"/>
+			</line>
+			<line>
+				<reportElement x="425" y="104" width="1" height="23" uuid="dd9e2276-5122-4c2f-8e27-621c8e0b3d2c"/>
+			</line>
+			<line>
+				<reportElement x="28" y="105" width="1" height="22" uuid="02ad374a-5d8d-42c6-ab24-a2537636a627"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="105" width="21" height="22" uuid="f1eb911e-5252-4aac-b263-514ef5157b9a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="105" width="259" height="23" uuid="41abdb8b-b942-46b6-9f57-64949a76144d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Less stable deposits]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="128" width="555" height="23" backcolor="#D9D9D9" uuid="baf24d0b-21b9-4fd0-8b33-e4f2138b0ff8"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="150" width="555" height="1" uuid="01b61db5-b1eb-4233-be60-1cbb05c6624e"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="128" width="21" height="22" uuid="01f1810b-8fbb-4ace-a12a-fa0c0f5e9df8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<line>
+				<reportElement x="28" y="128" width="1" height="22" uuid="d63b0727-155d-4717-a3f1-09bb81c9fdc7"/>
+			</line>
+			<line>
+				<reportElement x="425" y="127" width="1" height="23" uuid="794d9500-e09e-4dd0-ab33-21d86252da43"/>
+			</line>
+			<line>
+				<reportElement x="295" y="127" width="1" height="23" uuid="672646a1-2f30-4a9c-9b06-b9653ec912ed"/>
+			</line>
+			<staticText>
+				<reportElement x="36" y="128" width="259" height="23" uuid="5b3e66ae-3252-4a3d-a64d-742d123f18ed"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[Unsecured wholesale funding, of which: ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="151" width="555" height="23" backcolor="#FFFFFF" uuid="d6840206-a02c-4125-8c28-b17a46451c93"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="173" width="555" height="1" uuid="6d83a109-0c03-4236-abee-8bf2b6fc8112"/>
+			</line>
+			<line>
+				<reportElement x="295" y="150" width="1" height="23" uuid="cc9ab168-db1c-4c86-ba88-a39ab5e04dc0"/>
+			</line>
+			<line>
+				<reportElement x="425" y="150" width="1" height="23" uuid="d97ba0ba-b5cd-4ecd-8a60-379c2b43ec7a"/>
+			</line>
+			<line>
+				<reportElement x="28" y="151" width="1" height="22" uuid="2f9cf877-8694-4108-965a-9b57cb031656"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="151" width="21" height="22" uuid="f8b7dd8f-d140-465b-978a-c6a9645a083e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="151" width="259" height="23" uuid="14bd1e76-2fcb-454c-95cd-5b13d1cfd382"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Operational deposits (all counterparties) and deposits in networks of cooperative banks ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="174" width="555" height="23" backcolor="#FFFFFF" uuid="971b8a60-9847-4a5a-8fd8-28c1801ccd53"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="196" width="555" height="1" uuid="a7f059d7-17ba-44a4-a38e-3de52b291d3a"/>
+			</line>
+			<line>
+				<reportElement x="295" y="173" width="1" height="23" uuid="4f5955a8-c4e6-4c96-8786-1dff156450f5"/>
+			</line>
+			<line>
+				<reportElement x="425" y="173" width="1" height="23" uuid="844c9cc2-e540-43a5-ae14-39b5a98fc26f"/>
+			</line>
+			<line>
+				<reportElement x="28" y="174" width="1" height="22" uuid="91eae038-39e2-4449-a0b0-4d5a43bad3c7"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="174" width="21" height="22" uuid="fb2b50cc-68a4-4227-b1d1-4767cf24ab56"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="174" width="259" height="23" uuid="38ac8620-60b1-474c-8da4-897d7422f955"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Non-operational deposits (all counterparties) ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="197" width="555" height="23" backcolor="#FFFFFF" uuid="953c3512-0ed1-4481-b9e6-c75798389ab7"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="219" width="555" height="1" uuid="f5318aba-d8a8-4f6f-a1c6-9acc31ae4a09"/>
+			</line>
+			<line>
+				<reportElement x="295" y="196" width="1" height="23" uuid="3d85fabe-211f-42b5-a0f5-888d15aa26af"/>
+			</line>
+			<line>
+				<reportElement x="425" y="196" width="1" height="23" uuid="f5a43692-002c-4e4c-b2c5-294edcc12da6"/>
+			</line>
+			<line>
+				<reportElement x="28" y="197" width="1" height="22" uuid="f91b980a-95bd-47b1-969f-d6a6df49335b"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="197" width="21" height="22" uuid="477381d0-4397-4171-aff5-d61c1f63d522"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="197" width="259" height="23" uuid="693ea49e-e130-4f4f-8884-9603f143ea47"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Unsecured debt]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="220" width="555" height="23" backcolor="#D9D9D9" uuid="93014c39-6e9a-4ced-96f9-49807d64d184"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="242" width="555" height="1" uuid="29cc3b5a-83f6-4435-867d-eb8ad98f211f"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="220" width="21" height="22" uuid="950fc664-973a-4bdd-a82a-f9e83f51eb74"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[9]]></text>
+			</staticText>
+			<line>
+				<reportElement x="28" y="220" width="1" height="22" uuid="fd9e8fc1-f68d-45ee-ba76-5ec03eb39e55"/>
+			</line>
+			<line>
+				<reportElement x="425" y="219" width="1" height="23" uuid="50c5ae1a-2f00-4352-a80e-71f2fd0fff9a"/>
+			</line>
+			<line>
+				<reportElement x="295" y="219" width="1" height="23" uuid="c38a3e88-0707-4f54-9261-1bb2bddedf98"/>
+			</line>
+			<staticText>
+				<reportElement x="36" y="220" width="259" height="23" uuid="37c86654-7b40-485f-805b-0094dd02f702"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[Secured wholesale funding]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="243" width="555" height="23" backcolor="#D9D9D9" uuid="0804e09e-4547-4e75-a0e0-e705500968e9"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="265" width="555" height="1" uuid="0fdbb548-5748-4ee3-8dac-ab0ec1aa632f"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="243" width="21" height="22" uuid="aea2258b-8ee5-47af-945b-f4363dc57bd2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[10]]></text>
+			</staticText>
+			<line>
+				<reportElement x="28" y="243" width="1" height="22" uuid="8b638d52-17ea-4946-a238-96d0d450cd8e"/>
+			</line>
+			<line>
+				<reportElement x="425" y="242" width="1" height="23" uuid="a2448b4e-7f3a-43a1-a87e-28a502859b68"/>
+			</line>
+			<line>
+				<reportElement x="295" y="242" width="1" height="23" uuid="c3a59af3-9d75-454d-a919-e33938187c44"/>
+			</line>
+			<staticText>
+				<reportElement x="36" y="243" width="259" height="23" uuid="a05fc341-8c17-4f96-8ecd-233743514df4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[Additional requirements, of which:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="266" width="555" height="23" backcolor="#FFFFFF" uuid="5379ac2f-22d9-4e49-aa74-d5ff4bf29717"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="288" width="555" height="1" uuid="3203c65c-fd86-4457-9bb3-cf5c9488a187"/>
+			</line>
+			<line>
+				<reportElement x="295" y="265" width="1" height="23" uuid="1ae83ca8-5811-45be-be3f-3d01828291ad"/>
+			</line>
+			<line>
+				<reportElement x="425" y="265" width="1" height="23" uuid="832c176e-6c82-4152-acdb-e9f501e5a02c"/>
+			</line>
+			<line>
+				<reportElement x="28" y="266" width="1" height="22" uuid="c690c8a8-e044-418d-8e1f-d2fc3c27d53c"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="266" width="21" height="22" uuid="1a597a6f-f7ec-44ed-8453-721b98b4a082"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[11]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="266" width="259" height="23" uuid="19acbbe0-3148-4d66-a954-0d81e9bf5a52"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Outflows related to derivative exposures and other collateral requirements]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="289" width="555" height="23" backcolor="#FFFFFF" uuid="4c756089-44f8-4b16-99e7-f4327c885058"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="311" width="555" height="1" uuid="d73347fb-57f0-414d-b61c-ed7039fd9e04"/>
+			</line>
+			<line>
+				<reportElement x="295" y="288" width="1" height="23" uuid="4d10fd6a-dfb9-483d-90d5-2859b2cb13cd"/>
+			</line>
+			<line>
+				<reportElement x="425" y="288" width="1" height="23" uuid="f5f7763c-738b-4dc4-a518-fd338580344b"/>
+			</line>
+			<line>
+				<reportElement x="28" y="289" width="1" height="22" uuid="c282f0b6-ff35-4fa8-9ba8-9a3d74294260"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="289" width="21" height="22" uuid="77f26476-bb06-4b4f-8364-417bbd042958"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[12]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="289" width="259" height="23" uuid="4ac59722-a291-4d44-b4e3-ddd7ba7ea62f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Outflows related to loss of funding on debt products]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="312" width="555" height="23" backcolor="#FFFFFF" uuid="c3adcaa7-a76b-4f3f-b62a-059d2c16fc07"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="334" width="555" height="1" uuid="f0eb4f7f-fe38-41ce-9ab0-eb86eb1f2143"/>
+			</line>
+			<line>
+				<reportElement x="295" y="311" width="1" height="23" uuid="f8e9b010-550d-4769-9238-a90287d4a5d4"/>
+			</line>
+			<line>
+				<reportElement x="425" y="311" width="1" height="23" uuid="3f603e3c-7bf0-43b6-817a-021c3c58bf87"/>
+			</line>
+			<line>
+				<reportElement x="28" y="312" width="1" height="22" uuid="7e9fb674-7d34-4a12-ae00-36410e3d6c7c"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="312" width="21" height="22" uuid="25efd1c2-d6f5-4d61-a310-44ff82f67204"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[13]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="312" width="259" height="23" uuid="7883fdfb-bf63-4b0b-8976-526491025d63"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Credit and liquidity facilities]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="335" width="555" height="23" backcolor="#D9D9D9" uuid="29ce2979-3107-41b4-95fe-2a0676376c81"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="357" width="555" height="1" uuid="583cdacd-35f4-47e0-8d4c-ef5bd7dc8003"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="335" width="21" height="22" uuid="15d75394-c8d6-4c16-88ef-ddb82a53402b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[14]]></text>
+			</staticText>
+			<line>
+				<reportElement x="28" y="335" width="1" height="22" uuid="d9e83233-d06c-43e8-a299-3050b9b77d90"/>
+			</line>
+			<line>
+				<reportElement x="425" y="334" width="1" height="23" uuid="748bbac9-4635-4074-9883-439dde987db9"/>
+			</line>
+			<line>
+				<reportElement x="295" y="334" width="1" height="23" uuid="2d108a94-8be8-40b5-8ba5-adabf88d3737"/>
+			</line>
+			<staticText>
+				<reportElement x="36" y="335" width="259" height="23" uuid="70f72e4c-2613-4b75-a24b-2f66d434ac32"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[Other contractual funding obligations]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="358" width="555" height="23" backcolor="#D9D9D9" uuid="fe586713-b342-4281-b29f-0af6a242038f"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="380" width="555" height="1" uuid="3205188c-8272-42bd-8720-96e1a9cf6a43"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="358" width="21" height="22" uuid="45c8a551-00d0-40bc-bab9-593c6a82f1e0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<line>
+				<reportElement x="28" y="358" width="1" height="22" uuid="ddeeaf9d-79ec-4d62-82cd-db5d87c086f6"/>
+			</line>
+			<line>
+				<reportElement x="425" y="357" width="1" height="23" uuid="ea3bd972-18f7-43d7-af17-92b2c9cc6483"/>
+			</line>
+			<line>
+				<reportElement x="295" y="357" width="1" height="23" uuid="7553dd2b-3021-456e-8d2c-a16b526605df"/>
+			</line>
+			<staticText>
+				<reportElement x="36" y="358" width="259" height="23" uuid="00bf6c1a-f570-466b-a6b1-a7b5de4b9b28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[Other contingent funding obligations]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="381" width="555" height="23" backcolor="#D9D9D9" uuid="bdc9e5f4-0391-45ec-b417-ff745c91d0c5"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="403" width="555" height="1" uuid="51dd47f2-2ac3-443d-8ebf-0b9e91205dc5"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="381" width="21" height="22" uuid="a69a9fe1-8158-48b1-a4e9-405a54e4ec03"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[16]]></text>
+			</staticText>
+			<line>
+				<reportElement x="28" y="381" width="1" height="22" uuid="4a1bc3b2-5f0b-4aa1-9d9f-b34fc5add836"/>
+			</line>
+			<line>
+				<reportElement x="425" y="380" width="1" height="23" uuid="fdb57557-bf13-4848-a5c4-267ecc974715"/>
+			</line>
+			<line>
+				<reportElement x="295" y="380" width="1" height="23" uuid="572234d8-01de-40af-8292-96a4291000cc"/>
+			</line>
+			<staticText>
+				<reportElement x="36" y="381" width="259" height="23" uuid="30b0e469-3c23-42ff-afa5-8808ac230f8b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL CASH OUTFLOWS]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="404" width="555" height="18" forecolor="#FFFFFF" backcolor="#B2B2B2" uuid="1346e914-c6d2-425f-9086-067fa7605b2a"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="7" y="404" width="548" height="18" uuid="144995a3-5d1c-44ee-aea5-617319c9b18f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CASH INFLOWS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="421" width="555" height="1" uuid="c2564503-98c6-42b7-b583-d76a1207a367"/>
+			</line>
+			<rectangle>
+				<reportElement x="0" y="422" width="555" height="23" backcolor="#D9D9D9" uuid="e938ad50-46c8-49e7-81bc-8d061c32c6e1"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="444" width="555" height="1" uuid="a5f28115-f153-45f1-bebe-d5ddc0c24ca1"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="422" width="21" height="22" uuid="fbf8e162-9277-4201-a8bc-84c60d127dc3"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[17]]></text>
+			</staticText>
+			<line>
+				<reportElement x="28" y="422" width="1" height="22" uuid="fcd063f3-2b02-4987-932b-61b8d997ac76"/>
+			</line>
+			<line>
+				<reportElement x="425" y="422" width="1" height="22" uuid="2a4c4c77-08cb-45ba-ba36-f0849a8943ea"/>
+			</line>
+			<line>
+				<reportElement x="295" y="422" width="1" height="22" uuid="07c4bde2-2c7b-40eb-b7ce-692c800790b9"/>
+			</line>
+			<staticText>
+				<reportElement x="36" y="422" width="259" height="23" uuid="df2969d0-d776-48fb-9b9e-85eeab640cb2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[Secured lending (eg reverse repos)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="445" width="555" height="23" backcolor="#D9D9D9" uuid="1632ad67-b5ef-49ba-a15f-b1251cc16944"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="467" width="555" height="1" uuid="951800cc-aab3-4824-98bc-6e2ba0dd5efc"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="445" width="21" height="22" uuid="8521a50b-6e45-484f-8b78-f3be0f842377"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[18]]></text>
+			</staticText>
+			<line>
+				<reportElement x="28" y="445" width="1" height="22" uuid="978f3b55-3bdc-4780-b9cd-43bac5c308bf"/>
+			</line>
+			<line>
+				<reportElement x="425" y="444" width="1" height="23" uuid="61e2421e-437c-49d2-a029-b60f26554957"/>
+			</line>
+			<line>
+				<reportElement x="295" y="444" width="1" height="23" uuid="faf5dce3-7ed1-4b0a-98d6-dc07b0854693"/>
+			</line>
+			<staticText>
+				<reportElement x="36" y="445" width="259" height="23" uuid="5e48958e-a746-4810-9178-4c6c5e64d54e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[Inflows from fully performing exposures]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="468" width="555" height="23" backcolor="#D9D9D9" uuid="74090ad9-04d9-4298-9a75-7cbab6e7ffe6"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="490" width="555" height="1" uuid="c758ec30-ef37-4dc7-98c3-f9433b8b037b"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="468" width="21" height="22" uuid="9083d73c-95c6-4183-abd3-c1b493970d79"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[19]]></text>
+			</staticText>
+			<line>
+				<reportElement x="28" y="468" width="1" height="22" uuid="e8c3fcdc-8369-4239-a04c-8caa495bde97"/>
+			</line>
+			<line>
+				<reportElement x="425" y="467" width="1" height="23" uuid="74e8d1e2-904f-47e2-9b75-c69414073183"/>
+			</line>
+			<line>
+				<reportElement x="295" y="467" width="1" height="23" uuid="200e6a30-ff6d-4323-ae7b-926bc1be4bff"/>
+			</line>
+			<staticText>
+				<reportElement x="36" y="468" width="259" height="23" uuid="da91edc7-76bc-4c85-9f85-c8f52bec41f1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[Other cash inflows]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="491" width="555" height="23" backcolor="#D9D9D9" uuid="f49a40a2-d069-48bf-8f01-0b4afd5a39a0"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="513" width="555" height="1" uuid="670af2e7-d601-450b-8d89-ff29ba91c747"/>
+				<graphicElement>
+					<pen lineWidth="3.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="7" y="491" width="21" height="22" uuid="88229a70-660f-456c-88e0-77948d812e22"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[20]]></text>
+			</staticText>
+			<line>
+				<reportElement x="28" y="491" width="1" height="22" uuid="014c6bf9-8c9c-4bda-bb58-90ec0393d664"/>
+			</line>
+			<line>
+				<reportElement x="425" y="490" width="1" height="23" uuid="622e0340-901b-4d7e-90a2-10bf703d8605"/>
+			</line>
+			<line>
+				<reportElement x="295" y="490" width="1" height="23" uuid="9154db8b-a076-43eb-8572-2764ec3a979d"/>
+			</line>
+			<staticText>
+				<reportElement x="36" y="491" width="259" height="23" uuid="c0ec5fdf-a15a-4252-9a22-a4a0d51a5f7b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL CASH INFLOWS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="538" width="555" height="1" uuid="86379978-0fc9-4225-8ec8-143fc4dd3055"/>
+				<graphicElement>
+					<pen lineWidth="3.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="426" y="513" width="129" height="23" uuid="1eb0594c-43a7-4f61-b530-a9453cad5aa2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[TOTAL ADJUSTED VALUE]]></text>
+			</staticText>
+			<line>
+				<reportElement x="425" y="514" width="1" height="24" uuid="d5028c26-77a4-4b69-b303-ad0ce358dda5"/>
+			</line>
+			<rectangle>
+				<reportElement x="0" y="539" width="555" height="23" backcolor="#D9D9D9" uuid="f97b842a-0b1b-4871-8a98-6d0c5bf3c121"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="561" width="555" height="1" uuid="cbc2769d-eddd-416f-9759-a0783a2dc15c"/>
+			</line>
+			<staticText>
+				<reportElement x="7" y="539" width="21" height="22" uuid="1670fce6-5512-4e9d-a2a0-60dc439f3fb7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[21]]></text>
+			</staticText>
+			<line>
+				<reportElement x="28" y="539" width="1" height="22" uuid="26712457-1f60-460c-9692-fa17fd5cd4b8"/>
+			</line>
+			<line>
+				<reportElement x="425" y="539" width="1" height="22" uuid="a9735d4c-2859-4c8b-86ad-1a5c97798c7f"/>
+			</line>
+			<line>
+				<reportElement x="295" y="539" width="1" height="22" uuid="a32604fb-bf3e-439f-9a16-0fd417a7a2c2"/>
+			</line>
+			<staticText>
+				<reportElement x="36" y="539" width="259" height="23" uuid="807f4ee1-e945-4390-9aad-f1e48458f0f8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL HQLA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="562" width="555" height="23" backcolor="#D9D9D9" uuid="483d2798-1c11-41d8-a3ff-b66225aabe3a"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="584" width="555" height="1" uuid="5fc354aa-cfe5-4164-9c9c-91726e070d53"/>
+				<graphicElement>
+					<pen lineWidth="3.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="7" y="562" width="21" height="22" uuid="c66d0dec-c96e-48cd-9652-5108e51ba5c5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[22]]></text>
+			</staticText>
+			<line>
+				<reportElement x="28" y="562" width="1" height="22" uuid="9f8eb494-b9e8-4ba3-9b76-6886e7ab081d"/>
+			</line>
+			<line>
+				<reportElement x="425" y="561" width="1" height="23" uuid="a3dfb353-20fe-482c-b12b-1069c3c6db50"/>
+			</line>
+			<line>
+				<reportElement x="295" y="561" width="1" height="23" uuid="6e29ded4-00b0-41a5-9269-6bb027e601fa"/>
+			</line>
+			<staticText>
+				<reportElement x="36" y="562" width="259" height="23" uuid="300223e1-0e61-49a8-a01d-846221c22283"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL NET CASH OUTFLOWS ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="586" width="425" height="20" backcolor="#D9D9D9" uuid="6a4145ab-bdaa-4ed7-8631-19f5b194e167"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="607" width="555" height="1" uuid="14fd3dec-b393-4ebc-81f3-ae1e6a27b638"/>
+				<graphicElement>
+					<pen lineWidth="3.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="7" y="585" width="21" height="22" uuid="13c462c4-bd14-48fc-987e-5674798e7fbc"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[23]]></text>
+			</staticText>
+			<line>
+				<reportElement x="28" y="585" width="1" height="22" uuid="daf3a943-ac19-4b49-bdb8-3bad4da3c2e3"/>
+			</line>
+			<line>
+				<reportElement x="425" y="584" width="1" height="23" uuid="9937035b-b12c-4242-a708-b746cd56dfeb"/>
+			</line>
+			<line>
+				<reportElement x="295" y="584" width="1" height="23" uuid="a7c8d3cd-b6fc-4eeb-9f62-8bfefb9b65d3"/>
+			</line>
+			<staticText>
+				<reportElement x="36" y="585" width="259" height="23" uuid="5d778fa9-f4df-4354-9310-9c7c1100a8d0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LIQUIDITY COVERAGE RATIO (%) ]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="18" width="129" height="22" uuid="2b301073-4880-426d-82d7-aebb8ab3c866"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalWeightedValueHQLA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="2"/>
+	</columnFooter>
+	<summary>
+		<band height="2" splitType="Stretch"/>
+	</summary>
+</jasperReport>
