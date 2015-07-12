@@ -1,12 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="liquidity-coverage-ratio" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="452176f6-ee37-4161-bc92-d4eef55e5480">
-	<property name="ireport.zoom" value="1.6105100000000327"/>
+	<property name="ireport.zoom" value="1.3310000000000282"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["D:\\Java\\workspace-jasper\\"]]></defaultValueExpression>
 	</parameter>
 	<field name="totalWeightedValueHQLA" class="java.math.BigDecimal"/>
+	<field name="totalUnweightedStableDeposits" class="java.math.BigDecimal"/>
+	<field name="totalWeightedStableDeposits" class="java.math.BigDecimal"/>
+	<field name="totalUnweightedLessStableDeposits" class="java.math.BigDecimal"/>
+	<field name="totalWeightedLessStableDeposits" class="java.math.BigDecimal"/>
+	<field name="totalUnweightedOperationalDeposits" class="java.math.BigDecimal"/>
+	<field name="totalWeightedOperationalDeposits" class="java.math.BigDecimal"/>
+	<field name="totalUnweightedNonOperationalDeposits" class="java.math.BigDecimal"/>
+	<field name="totalWeightedNonOperationalDeposits" class="java.math.BigDecimal"/>
+	<field name="totalUnweightedUnsecuredDebt" class="java.math.BigDecimal"/>
+	<field name="totalWeightedUnsecuredDebt" class="java.math.BigDecimal"/>
+	<field name="totalWeightedSecuredWholesaleFunding" class="java.math.BigDecimal"/>
+	<field name="totalUnweightedDerivativeExposureCollateralRequirements" class="java.math.BigDecimal"/>
+	<field name="totalWeightedDerivativeExposureCollateralRequirements" class="java.math.BigDecimal"/>
+	<field name="totalUnweightedLossOfFunding" class="java.math.BigDecimal"/>
+	<field name="totalWeightedLossOfFunding" class="java.math.BigDecimal"/>
+	<field name="totalUnweightedCreditAndLiquidityFacilities" class="java.math.BigDecimal"/>
+	<field name="totalWeightedCreditAndLiquidityFacilities" class="java.math.BigDecimal"/>
+	<field name="totalUnweightedContractualFundingObligations" class="java.math.BigDecimal"/>
+	<field name="totalWeightedContractualFundingObligations" class="java.math.BigDecimal"/>
+	<field name="totalUnweightedContingentFundingObligations" class="java.math.BigDecimal"/>
+	<field name="totalWeightedContingentFundingObligations" class="java.math.BigDecimal"/>
+	<field name="totalUnweightedSecuredLending" class="java.math.BigDecimal"/>
+	<field name="totalWeightedSecuredLending" class="java.math.BigDecimal"/>
+	<field name="totalUnweightedFullyPerformingExposures" class="java.math.BigDecimal"/>
+	<field name="totalWeightedFullyPerformingExposures" class="java.math.BigDecimal"/>
+	<field name="totalUnweightedOtherCashInflows" class="java.math.BigDecimal"/>
+	<field name="totalWeightedOtherCashInflows" class="java.math.BigDecimal"/>
+	<variable name="unweightedRetailDeposits" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{totalUnweightedStableDeposits}.add($F{totalUnweightedLessStableDeposits})]]></variableExpression>
+	</variable>
+	<variable name="weightedRetailDeposits" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{totalWeightedStableDeposits}.add($F{totalWeightedLessStableDeposits})]]></variableExpression>
+	</variable>
+	<variable name="unweightedUnsecuredWholesaleFunding" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{totalUnweightedOperationalDeposits}.add($F{totalUnweightedNonOperationalDeposits}).add($F{totalUnweightedUnsecuredDebt})]]></variableExpression>
+	</variable>
+	<variable name="weightedUnsecuredWholesaleFunding" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{totalWeightedOperationalDeposits}.add($F{totalWeightedNonOperationalDeposits}).add($F{totalWeightedUnsecuredDebt})]]></variableExpression>
+	</variable>
+	<variable name="unweightedAdditionalRequirements" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{totalUnweightedDerivativeExposureCollateralRequirements}.add($F{totalUnweightedLossOfFunding}).add($F{totalUnweightedCreditAndLiquidityFacilities})]]></variableExpression>
+	</variable>
+	<variable name="weightedAdditionalRequirements" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{totalWeightedDerivativeExposureCollateralRequirements}.add($F{totalWeightedLossOfFunding}).add($F{totalWeightedCreditAndLiquidityFacilities})]]></variableExpression>
+	</variable>
+	<variable name="weightedTotalCashOutflows" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$V{weightedRetailDeposits}
+    .add($V{weightedUnsecuredWholesaleFunding})
+    .add($F{totalWeightedSecuredWholesaleFunding})
+    .add($V{weightedAdditionalRequirements})
+    .add($F{totalWeightedContractualFundingObligations})
+    .add($F{totalWeightedContingentFundingObligations})]]></variableExpression>
+	</variable>
+	<variable name="unweightedTotalCashInflows" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{totalUnweightedSecuredLending}
+    .add($F{totalUnweightedFullyPerformingExposures})
+    .add($F{totalUnweightedOtherCashInflows})]]></variableExpression>
+	</variable>
+	<variable name="weightedTotalCashInflows" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{totalWeightedSecuredLending}
+    .add($F{totalWeightedFullyPerformingExposures})
+    .add($F{totalWeightedOtherCashInflows})]]></variableExpression>
+	</variable>
+	<variable name="totalHQLA" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{totalWeightedValueHQLA}]]></variableExpression>
+	</variable>
+	<variable name="totalNetCashOutflows" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$V{weightedTotalCashOutflows}.subtract($V{weightedTotalCashInflows})]]></variableExpression>
+	</variable>
+	<variable name="liquidityCoverageRatio" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$V{totalHQLA}.divide($V{totalNetCashOutflows}, 4, RoundingMode.HALF_UP).multiply(new BigDecimal("100"))]]></variableExpression>
+	</variable>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -878,11 +950,284 @@
 				<text><![CDATA[LIQUIDITY COVERAGE RATIO (%) ]]></text>
 			</staticText>
 			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
-				<reportElement x="426" y="18" width="129" height="22" uuid="2b301073-4880-426d-82d7-aebb8ab3c866"/>
+				<reportElement x="426" y="18" width="119" height="22" uuid="2b301073-4880-426d-82d7-aebb8ab3c866"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="Segoe UI" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{totalWeightedValueHQLA}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="296" y="82" width="118" height="22" uuid="7ae02f5b-d41b-4f09-979d-472eb10205a2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalUnweightedStableDeposits}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="82" width="119" height="22" uuid="89cd7f19-99ba-46cf-b8f0-b803a5a194b2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalWeightedStableDeposits}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="296" y="105" width="118" height="22" uuid="aa206058-d6f9-45aa-a79e-7a281f06f7b7"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalUnweightedLessStableDeposits}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="105" width="119" height="22" uuid="6eb6bed9-62cf-4c24-99a9-5f554df77cc6"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalWeightedLessStableDeposits}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="59" width="119" height="22" uuid="b03c4254-3b18-4990-a3d5-480173bc9b88"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{weightedRetailDeposits}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="296" y="59" width="118" height="22" uuid="578da627-5de8-49a2-b8fa-4a51554c9c68"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{unweightedRetailDeposits}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="296" y="151" width="118" height="22" uuid="ff4d2590-5285-4f16-b00e-6b7467274e11"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalUnweightedOperationalDeposits}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="151" width="119" height="22" uuid="717b5694-7246-4e75-8457-159f521a8c9b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalWeightedOperationalDeposits}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="296" y="174" width="118" height="22" uuid="0b7a07bc-9b49-4386-9e99-80883e16f4f2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalUnweightedNonOperationalDeposits}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="174" width="119" height="22" uuid="b983b24f-cab6-468a-831b-fe4f3d64441c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalWeightedNonOperationalDeposits}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="296" y="197" width="118" height="22" uuid="2d863be3-230c-4161-9d06-cd6904528d85"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalUnweightedUnsecuredDebt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="196" width="119" height="23" uuid="32ed81d7-eba3-443d-b379-9805776801e1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalWeightedUnsecuredDebt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="219" width="119" height="23" uuid="8aebdfaf-290e-41b4-9cae-244fedd83b4c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalWeightedSecuredWholesaleFunding}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="296" y="266" width="118" height="22" uuid="ddb2af3b-d24b-425b-9e70-4bc001d814e4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalUnweightedDerivativeExposureCollateralRequirements}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="266" width="119" height="22" uuid="52ca4002-9132-461b-a369-7a0d62420032"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalWeightedDerivativeExposureCollateralRequirements}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="296" y="289" width="118" height="22" uuid="b5d81a1d-0fd6-4f58-b772-ee16468d2c32"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalUnweightedLossOfFunding}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="289" width="119" height="22" uuid="67f40bc0-2ffb-4f35-b146-6adea40925b1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalWeightedLossOfFunding}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="296" y="312" width="118" height="22" uuid="f3c92560-89a9-4261-823f-7ef7e35c93a5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalUnweightedCreditAndLiquidityFacilities}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="312" width="119" height="22" uuid="43b60503-ca66-469a-b340-8a5d115b262d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalWeightedCreditAndLiquidityFacilities}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="296" y="334" width="118" height="23" uuid="0ab8041d-2f79-4cec-bb0c-8b1b064ab068"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalUnweightedContractualFundingObligations}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="335" width="119" height="22" uuid="8ccfc4c8-d6e2-48a6-bf66-6a3bc6e38fb0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalWeightedContractualFundingObligations}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="296" y="358" width="118" height="22" uuid="e3af208f-fe36-4e15-acaa-d3d4ac4b3d70"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalUnweightedContingentFundingObligations}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="358" width="119" height="22" uuid="997781bc-6dde-42f4-b78d-8d73a951863a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalWeightedContingentFundingObligations}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="296" y="127" width="118" height="23" uuid="c7c4b4ee-7d8c-4ae2-968d-c1436052bd4d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{unweightedUnsecuredWholesaleFunding}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="128" width="119" height="23" uuid="6d6727ab-2b32-4e90-9be5-18356c8823f1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{weightedUnsecuredWholesaleFunding}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="296" y="243" width="118" height="22" uuid="fd3bba3e-aebe-4b46-9a71-ad45b5625e3b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{unweightedAdditionalRequirements}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="243" width="119" height="22" uuid="382e07a7-c5e7-4f5d-8daa-7a800da7782a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{weightedAdditionalRequirements}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)">
+				<reportElement x="426" y="381" width="119" height="22" uuid="8b44dbe0-060a-40cf-aa0c-78b75e615548"/>
+				<textElement textAlignment="Right">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{weightedTotalCashOutflows}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="296" y="422" width="118" height="22" uuid="3a420f26-32db-407e-899f-f8b0a2784572"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalUnweightedSecuredLending}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="422" width="119" height="22" uuid="82136923-4086-4047-b621-c8ad3dfa78c3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalWeightedSecuredLending}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="296" y="445" width="118" height="22" uuid="bfacbb6f-372f-4c2b-9e1d-f2441b5de322"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalUnweightedFullyPerformingExposures}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="445" width="119" height="22" uuid="adf38fed-47ee-43b1-adbe-d46e5b1974a9"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalWeightedFullyPerformingExposures}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="296" y="468" width="118" height="22" uuid="5e73f59c-0794-4cfc-8416-e4f5a34ab7fc"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalUnweightedOtherCashInflows}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="468" width="119" height="22" uuid="64adea59-0a46-4007-9ee7-8fb7e8df1300"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalWeightedOtherCashInflows}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)">
+				<reportElement x="296" y="491" width="118" height="22" uuid="f5852e24-f3d9-4de2-bb1d-ebcb61309ecf"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{unweightedTotalCashInflows}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="491" width="119" height="22" uuid="b8cdc414-c8b9-41df-ad02-5af051ddeca5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{weightedTotalCashInflows}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="539" width="119" height="22" uuid="7072f38f-5f40-4693-8a4f-a06a14a721eb"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalHQLA}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="562" width="119" height="22" uuid="d398aa6a-13eb-4235-9595-e4d7126bcd80"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalNetCashOutflows}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement x="426" y="586" width="119" height="20" uuid="87d978ac-1848-47d7-a3ad-83cdca5d2332"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{liquidityCoverageRatio}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

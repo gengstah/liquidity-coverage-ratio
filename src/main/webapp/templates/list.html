@@ -1,0 +1,19 @@
+<section class="row" data-ng-controller="LiquidityCoverageRatioListController">	
+	<div class="row">
+		<div class="col-md-7">
+			<div class="page-header">
+				<h3>Liquidity Coverage Ratios</h3>
+			</div>
+			
+			<div class="list-group">
+				<a href="" class="list-group-item" data-ng-repeat="liquidityCoverageRatio in liquidityCoverageRatios" data-ng-click="showDetail(liquidityCoverageRatio)">
+					<h4 class="list-group-item-heading">LCR {{liquidityCoverageRatio.liquidityCoverageRatio}}%</h4>
+					<p class="list-group-item-text">
+						Total HQLA: {{liquidityCoverageRatio.totalWeightedValueHQLA}}<br />
+						Total Net Cash Outflows: {{liquidityCoverageRatio.totalNetCashFlows}}<br />
+					</p>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>

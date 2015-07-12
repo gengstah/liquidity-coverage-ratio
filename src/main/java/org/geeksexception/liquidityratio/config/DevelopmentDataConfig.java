@@ -13,7 +13,7 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.geeksexception.liquidityratio.annotation.Development;
 
 @Configuration
-@EnableJpaRepositories("com.mfhsapp.kcvlending.dao")
+@EnableJpaRepositories("org.geeksexception.liquidityratio.dao")
 @Development
 public class DevelopmentDataConfig extends AbstractDataConfig {
 	

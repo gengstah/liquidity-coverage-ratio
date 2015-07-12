@@ -1,0 +1,10 @@
+<section data-ng-controller="LiquidityCoverageRatioDetailController">
+	<div class="row">
+		<div class="col-md-2">ID</div>
+		<div class="col-md-2" data-ng-bind="liquidityCoverageRatio.id"></div>
+	</div>
+	
+	<button type="button" class="btn btn-primary" data-ng-click="pdf(liquidityCoverageRatio.id)">PDF</button>
+	<button type="button" class="btn btn-primary" data-ng-click="xls(liquidityCoverageRatio.id)">XLS</button>
+	<button type="button" class="btn btn-primary" data-ng-click="back()">Back</button>
+</section>
