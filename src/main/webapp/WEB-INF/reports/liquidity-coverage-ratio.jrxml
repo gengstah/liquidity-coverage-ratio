@@ -2,10 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="liquidity-coverage-ratio" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="452176f6-ee37-4161-bc92-d4eef55e5480">
 	<property name="ireport.zoom" value="1.3310000000000282"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
-	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
-		<defaultValueExpression><![CDATA["D:\\Java\\workspace-jasper\\"]]></defaultValueExpression>
-	</parameter>
+	<property name="ireport.y" value="384"/>
 	<field name="totalWeightedValueHQLA" class="java.math.BigDecimal"/>
 	<field name="totalUnweightedStableDeposits" class="java.math.BigDecimal"/>
 	<field name="totalWeightedStableDeposits" class="java.math.BigDecimal"/>
@@ -1147,7 +1144,7 @@
 			</textField>
 			<textField pattern="#,##0.00;(#,##0.00)">
 				<reportElement x="426" y="381" width="119" height="22" uuid="8b44dbe0-060a-40cf-aa0c-78b75e615548"/>
-				<textElement textAlignment="Right">
+				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="Segoe UI" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{weightedTotalCashOutflows}]]></textFieldExpression>
