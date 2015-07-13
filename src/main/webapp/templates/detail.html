@@ -1,8 +1,782 @@
+<style type="text/css">
+	p {
+		color: black;
+		font-family: Arial, sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		text-decoration: none;
+		font-size: 11pt;
+		margin: 0pt;
+	}
+	
+	.s1 {
+		color: black;
+		font-family: Arial, sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		text-decoration: none;
+		font-size: 8pt;
+	}
+	
+	td>p {
+		display: inline;
+	}
+</style>
 <section data-ng-controller="LiquidityCoverageRatioDetailController">
-	<div class="row">
+	<!-- <div class="row">
 		<div class="col-md-2">ID</div>
 		<div class="col-md-2" data-ng-bind="liquidityCoverageRatio.id"></div>
-	</div>
+	</div> -->
+	
+	<p
+		style="padding-top: 5pt; padding-left: 5pt; text-indent: 0pt; text-align: left;">
+		<span><img width="734" height="1" alt="image"
+			src="../img/divider.png" /></span>
+	</p>
+	<p style="text-indent: 0pt; line-height: 6pt; text-align: left;">
+		<br />
+	</p>
+	<p style="padding-top: 3pt; padding-left: 13pt; text-indent: 0pt; text-align: left;">
+		<span style="font-family: Segoe UI; color: #000000; font-size: 13px; line-height: 1.3300781;">LCR common disclosure template</span>
+	</p>
+	<p style="text-indent: 0pt; line-height: 10pt; text-align: left;">
+		<br />
+	</p>
+	<table
+		style="border-collapse: collapse; width: 555pt; margin-left: 4.5pt" cellspacing="0">
+		<tr>
+			<td style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt" colspan="2">
+				<p style="text-indent: 0pt; line-height: 9pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><i><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">(In local currency)</span></i></p>
+			</td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 6pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 7pt; padding-right: 7pt; text-indent: 0pt; text-align: center;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">TOTAL UNWEIGHTED VALUE</span></p>
+				<p class="s1" style="padding-top: 1pt; padding-left: 7pt; padding-right: 7pt; text-indent: 0pt; text-align: center;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">(average)</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 6pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="text-indent: 0pt; text-align: center;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">TOTAL WEIGHTED VALUE</span></p>
+				<p class="s1" style="padding-top: 1pt; padding-left: 7pt; padding-right: 7pt; text-indent: 0pt; text-align: center;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">(average)</span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"
+				colspan="4" bgcolor="#B2B2B2"><p class="s1"
+					style="padding-top: 4pt; padding-left: 7pt; text-indent: 0pt; text-align: left;">
+					<b><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">HIGH-QUALITY LIQUID ASSETS</span></b>
+				</p></td>
+		</tr>
+		<tr>
+			<td style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt" bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">1</span></p></td>
+			<td style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt" bgcolor="#D8D8D8"><p style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">Total high-quality liquid assets (HQLA)</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8" />
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 83pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalWeightedValueHQLA | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"
+				colspan="4" bgcolor="#B2B2B2"><p class="s1"
+					style="padding-top: 4pt; padding-left: 7pt; text-indent: 0pt; text-align: left;"><b><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">CASH OUTFLOWS</span></b></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">2</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">Retail deposits and deposits from small business customers, of which:</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 100pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalUnweightedRetailDeposits | number"></span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 79pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalWeightedRetailDeposits | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">3</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">Stable deposits</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 100pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalUnweightedStableDeposits | number"></span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 79pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px; line-height: 1.3300781;" data-ng-bind="liquidityCoverageRatio.totalWeightedStableDeposits | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">4</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">Less stable deposits</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 103pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px; line-height: 1.3300781;" data-ng-bind="liquidityCoverageRatio.totalUnweightedLessStableDeposits | number"></span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 83pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px; line-height: 1.3300781;" data-ng-bind="liquidityCoverageRatio.totalWeightedLessStableDeposits | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">5</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">Unsecured wholesale funding, of which:</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 6pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 96pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalUnweightedUnsecuredWholesaleFunding | number"></span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 78pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalWeightedUnsecuredWholesaleFunding | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">6</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					class="s1"
+					style="padding-top: 1pt; padding-left: 7pt; padding-right: 18pt; text-indent: 0pt; line-height: 115%; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">Operational deposits (all counterparties) and deposits in networks of cooperative banks</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 100pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalUnweightedOperationalDeposits | number"></span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 83pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalWeightedOperationalDeposits | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">7</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">Non-operational deposits (all counterparties)</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 100pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalUnweightedNonOperationalDeposits | number"></span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 83pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalWeightedNonOperationalDeposits | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">8</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">Unsecured debt</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 100pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalUnweightedUnsecuredDebt | number"></span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 6pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 83pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalWeightedUnsecuredDebt | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">9</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">Secured wholesale funding</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8" />
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 6pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 83pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalWeightedSecuredWholesaleFunding | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">10</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">Additional requirements, of which:</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 100pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalUnweightedAdditionalRequirements | number"></span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 75pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalWeightedAdditionalRequirements | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">11</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">Outflows related to derivative exposures and other collateral</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 100pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalUnweightedDerivativeExposureCollateralRequirements | number"></span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 83pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalWeightedDerivativeExposureCollateralRequirements | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">12</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">Outflows related to loss of funding on debt products</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 100pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalUnweightedLossOfFunding | number"></span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 83pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalWeightedLossOfFunding | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">13</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">Credit and liquidity facilities</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 100pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalUnweightedCreditAndLiquidityFacilities | number"></span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 83pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalWeightedCreditAndLiquidityFacilities | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">14</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">Other contractual funding obligations</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 6pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 100pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalUnweightedContractualFundingObligations | number"></span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 83pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalWeightedContractualFundingObligations | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">15</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">Other contingent funding obligations</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 100pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalUnweightedContingentFundingObligations | number"></span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 83pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalWeightedContingentFundingObligations | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">16</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><b><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">TOTAL CASH OUTFLOWS</span></b></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8" />
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"
+				bgcolor="#D8D8D8"><p class="s1"
+					style="padding-top: 1pt; padding-left: 72pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalWeightedCashOutflows | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"
+				colspan="4" bgcolor="#B2B2B2"><p class="s1"
+					style="padding-top: 4pt; padding-left: 7pt; text-indent: 0pt; text-align: left;"><b><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">CASH INFLOWS</span></b></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">17</span></p></td>
+			<td style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt" bgcolor="#D8D8D8">
+				<p style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">Secured lending (eg reverse repos)</span></p></td>
+			<td style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt" bgcolor="#D8D8D8">
+				<p style="text-indent: 0pt; line-height: 7pt; text-align: left;"><br /></p>
+				<p class="s1" style="padding-left: 110pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalUnweightedSecuredLending | number"></span></p>
+			</td>
+			<td style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt" bgcolor="#D8D8D8">
+				<p style="text-indent: 0pt; line-height: 7pt; text-align: left;"><br /></p>
+				<p class="s1" style="padding-left: 90pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalWeightedSecuredLending | number"></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">18</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">Inflows from fully performing exposures</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 110pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalUnweightedFullyPerformingExposures | number"></span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 90pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalWeightedFullyPerformingExposures | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">19</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">Other cash inflows</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 110pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalUnweightedOtherCashInflows | number"></span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 90pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalWeightedOtherCashInflows | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 3pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">20</span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 3pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><b><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">TOTAL CASH INFLOWS</span></b></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 3pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 108pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalUnweightedCashInflows | number"></span></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 3pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 85pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalWeightedCashInflows | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 3pt; border-bottom-style: solid; border-bottom-width: 3pt; border-right-style: solid; border-right-width: 1pt"
+				colspan="3" />
+			<td
+				style="border-top-style: solid; border-top-width: 3pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 3pt"><p
+					style="text-indent: 0pt; line-height: 5pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 15pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">TOTAL ADJUSTED VALUE</span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 3pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 6pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><b><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">21</span></b></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 3pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 6pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><b><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">TOTAL HQLA</span></b></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 3pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8" />
+			<td
+				style="border-top-style: solid; border-top-width: 3pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 6pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 83pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalWeightedValueHQLA | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-bottom-style: solid; border-bottom-width: 3pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><b><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">22</span></b></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 3pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><b><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">TOTAL NET CASH OUTFLOWS</span></b></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 3pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8" />
+			<td
+				style="border-top-style: solid; border-top-width: 1pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 3pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 7pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 72pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.totalNetCashFlows | number"></span></p></td>
+		</tr>
+		<tr>
+			<td
+				style="border-top-style: solid; border-top-width: 3pt; border-bottom-style: solid; border-bottom-width: 3pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 6pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1"
+					style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><b><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">23</span></b></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 3pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 3pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8"><p
+					style="text-indent: 0pt; line-height: 6pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 7pt; text-indent: 0pt; text-align: left;"><b><span style="font-family: Segoe UI; color: #000000; font-size: 10px;">LIQUIDITY COVERAGE RATIO (%)</span></b></p></td>
+			<td
+				style="border-top-style: solid; border-top-width: 3pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 3pt; border-right-style: solid; border-right-width: 1pt"
+				bgcolor="#D8D8D8" />
+			<td
+				style="border-top-style: solid; border-top-width: 3pt; border-left-style: solid; border-left-width: 1pt; border-bottom-style: solid; border-bottom-width: 3pt"><p
+					style="text-indent: 0pt; line-height: 6pt; text-align: left;">
+					<br />
+				</p>
+				<p class="s1" style="padding-left: 93pt; text-indent: 0pt; text-align: left;"><span style="font-family: Segoe UI; color: #000000; font-size: 10px;" data-ng-bind="liquidityCoverageRatio.liquidityCoverageRatio | number"></span></p></td>
+		</tr>
+	</table>
 	
 	<button type="button" class="btn btn-primary" data-ng-click="pdf(liquidityCoverageRatio.id)">PDF</button>
 	<button type="button" class="btn btn-primary" data-ng-click="xls(liquidityCoverageRatio.id)">XLS</button>
