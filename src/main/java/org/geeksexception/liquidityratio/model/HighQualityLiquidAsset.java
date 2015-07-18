@@ -10,6 +10,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
 
 import org.geeksexception.liquidityratio.enums.HighQualityLiquidAssetLevel;
@@ -28,17 +29,30 @@ public class HighQualityLiquidAsset implements Serializable {
 	@Column(name = "NAME")
 	private String name;
 	
-	@Column(name = "WEIGHTED_AMOUNT")
-	private BigDecimal weightedAmount;
+	@Column(name = "UNWEIGHTED_AMOUNT")
+	private BigDecimal unweightedAmount;
 	
 	@Column(name = "LEVEL")
 	@Enumerated(EnumType.STRING)
 	private HighQualityLiquidAssetLevel highQualityLiquidAssetLevel;
 	
+	@Column(name = "HAIRCUT")
+	private BigDecimal haircut;
+	
 	public HighQualityLiquidAsset() { }
 	
-	public HighQualityLiquidAsset(String name, BigDecimal weightedAmount) { 
-		this.name = name; this.weightedAmount = weightedAmount; 
+	public HighQualityLiquidAsset(String name, BigDecimal unweightedAmount) { 
+		this.name = name; this.unweightedAmount = unweightedAmount; 
+	}
+	
+	@PrePersist
+	public void prePersist() {
+		if(highQualityLiquidAssetLevel == null) highQualityLiquidAssetLevel = HighQualityLiquidAssetLevel.LEVEL1;
+		if(haircut == null) {
+			if(highQualityLiquidAssetLevel == HighQualityLiquidAssetLevel.LEVEL1) haircut = BigDecimal.ZERO;
+			else if(highQualityLiquidAssetLevel == HighQualityLiquidAssetLevel.LEVEL2A) haircut = new BigDecimal("0.15");
+			else if(highQualityLiquidAssetLevel == HighQualityLiquidAssetLevel.LEVEL2B) haircut = new BigDecimal("0.25");;
+		}
 	}
 
 	public Long getId() {
@@ -53,12 +67,16 @@ public class HighQualityLiquidAsset implements Serializable {
 		this.name = name;
 	}
 
-	public BigDecimal getWeightedAmount() {
-		return weightedAmount;
+	public BigDecimal getUnweightedAmount() {
+		return unweightedAmount;
 	}
 
-	public void setWeightedAmount(BigDecimal weightedAmount) {
-		this.weightedAmount = weightedAmount;
+	public void setUnweightedAmount(BigDecimal unweightedAmount) {
+		this.unweightedAmount = unweightedAmount;
+	}
+	
+	public BigDecimal getWeightedAmount() {
+		return unweightedAmount.subtract(unweightedAmount.multiply(haircut));
 	}
 
 	public HighQualityLiquidAssetLevel getHighQualityLiquidAssetLevel() {
@@ -70,12 +88,12 @@ public class HighQualityLiquidAsset implements Serializable {
 		this.highQualityLiquidAssetLevel = highQualityLiquidAssetLevel;
 	}
 
-	@Override
-	public String toString() {
-		return "HighQualityLiquidAsset [id=" + id + ", name=" + name
-				+ ", weightedAmount=" + weightedAmount
-				+ ", highQualityLiquidAssetLevel="
-				+ highQualityLiquidAssetLevel + "]";
+	public BigDecimal getHaircut() {
+		return haircut;
+	}
+
+	public void setHaircut(BigDecimal haircut) {
+		this.haircut = haircut;
 	}
 	
 }

@@ -6,18 +6,19 @@ import java.math.BigDecimal;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.Inheritance;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 @Entity
 @Access(AccessType.FIELD)
 @Table(name = "CASH_INFLOW")
+@Inheritance
+@DiscriminatorColumn(name="CASH_INFLOW_TYPE")
 public class CashInflow implements Serializable {
 	
 	private static final long serialVersionUID = 2665139265252766263L;
@@ -27,20 +28,14 @@ public class CashInflow implements Serializable {
 	@Column(name = "ID", nullable = false)
 	private Long id;
 	
-	@ManyToOne
-	@JoinColumn(name="SECURED_LENDING")
-	private SecuredLending securedLending;
+	@Column(name = "NAME", nullable = false)
+	private String name;
 	
-	@ManyToOne
-	@JoinColumn(name="PERFORMING_EXPOSURE")
-	private PerformingExposure performingExposure;
+	@Column(name = "UNWEIGHTED_AMOUNT")
+	private BigDecimal unweightedAmount;
 	
-	@ManyToOne
-	@JoinColumn(name="OTHER_CASH_INFLOW")
-	private OtherCashInflow otherCashInflow;
-	
-	@Transient
-	private BigDecimal totalCashOutflow;
+	@Column(name = "INFLOW_RATE")
+	protected BigDecimal inflowRate;
 	
 	public CashInflow() { }
 
@@ -48,37 +43,27 @@ public class CashInflow implements Serializable {
 		return id;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public String getName() {
+		return name;
 	}
 
-	public SecuredLending getSecuredLending() {
-		return securedLending;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public void setSecuredLending(SecuredLending securedLending) {
-		this.securedLending = securedLending;
+	public BigDecimal getUnweightedAmount() {
+		return unweightedAmount;
 	}
 
-	public PerformingExposure getPerformingExposure() {
-		return performingExposure;
+	public void setUnweightedAmount(BigDecimal unweightedAmount) {
+		this.unweightedAmount = unweightedAmount;
 	}
 
-	public void setPerformingExposure(PerformingExposure performingExposure) {
-		this.performingExposure = performingExposure;
+	public BigDecimal getInflowRate() {
+		return inflowRate;
 	}
 
-	public OtherCashInflow getOtherCashInflow() {
-		return otherCashInflow;
+	public void setInflowRate(BigDecimal inflowRate) {
+		this.inflowRate = inflowRate;
 	}
-
-	public void setOtherCashInflow(OtherCashInflow otherCashInflow) {
-		this.otherCashInflow = otherCashInflow;
-	}
-
-	public BigDecimal getTotalCashOutflow() {
-		// TODO: computation of total cash inflow
-		return totalCashOutflow;
-	}
-
 }
