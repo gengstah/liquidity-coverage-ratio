@@ -50,7 +50,7 @@ public class UnsecuredWholesaleFunding implements Serializable {
 		if(runOffRate == null) {
 			if(unsecuredWholesaleFundingType == UnsecuredWholesaleFundingType.OPERATIONAL) runOffRate = new BigDecimal("0.25");
 			else if(unsecuredWholesaleFundingType == UnsecuredWholesaleFundingType.NON_OPERATIONAL) runOffRate = new BigDecimal("0.4");
-			else runOffRate = new BigDecimal("1.00");
+			else if(unsecuredWholesaleFundingType == UnsecuredWholesaleFundingType.UNSECURED_DEBT) runOffRate = new BigDecimal("1.00");
 		}
 	}
 
