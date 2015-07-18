@@ -18,7 +18,7 @@ public class UnsecuredWholesaleFunding extends CashOutflow implements Serializab
 	
 	private static final long serialVersionUID = -5940942755269011062L;
 	
-	@Column(name = "UNSECURED_WHOLESALE_FUNDING_TYPE", nullable = false)
+	@Column(name = "UNSECURED_WHOLESALE_FUNDING_TYPE")
 	@Enumerated(EnumType.STRING)
 	private UnsecuredWholesaleFundingType unsecuredWholesaleFundingType;
 	

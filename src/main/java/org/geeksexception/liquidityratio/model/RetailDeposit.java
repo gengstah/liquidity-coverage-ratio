@@ -18,7 +18,7 @@ public class RetailDeposit extends CashOutflow implements Serializable {
 	
 	private static final long serialVersionUID = -8736011150553614086L;
 	
-	@Column(name = "UNWEIGHTED_AMOUNT", nullable = false)
+	@Column(name = "RETAIL_DEPOSIT_TYPE")
 	@Enumerated(EnumType.STRING)
 	private RetailDepositType retailDepositType;
 	

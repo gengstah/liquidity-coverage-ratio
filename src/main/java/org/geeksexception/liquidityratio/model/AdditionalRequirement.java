@@ -18,7 +18,7 @@ public class AdditionalRequirement extends CashOutflow implements Serializable {
 	
 	private static final long serialVersionUID = -2750632584242148237L;
 	
-	@Column(name = "ADDITIONAL_REQUIREMENT_TYPE", nullable = false)
+	@Column(name = "ADDITIONAL_REQUIREMENT_TYPE")
 	@Enumerated(EnumType.STRING)
 	private AdditionalRequirementType additionalRequirementType;
 	
