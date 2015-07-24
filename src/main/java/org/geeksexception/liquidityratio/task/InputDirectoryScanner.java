@@ -32,7 +32,7 @@ public class InputDirectoryScanner {
 		
 		for(String fileName : fileNames) {
 			File file = new File(env.getProperty("input.scan.directory") + "/" + fileName);
-			if(file.isDirectory() || !fileName.substring(fileName.lastIndexOf('.')+1).equalsIgnoreCase(env.getProperty("input.scan.extension"))) continue;
+			if(fileValid(file)) continue;
 			
 			logger.info("Processing file {}", fileName);
 			fileProcessor.processFile(file);
@@ -40,6 +40,12 @@ public class InputDirectoryScanner {
 			moveFileToProcessedDirectory(file);
 		}
 		
+	}
+
+	private boolean fileValid(File file) {
+		return file.isDirectory() || 
+				!file.getName().substring(file.getName().lastIndexOf('.') + 1)
+					.equalsIgnoreCase(env.getProperty("input.scan.extension"));
 	}
 
 	private void moveFileToProcessedDirectory(File file) throws IOException {
