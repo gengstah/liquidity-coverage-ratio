@@ -7,8 +7,8 @@ import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
-@Entity
-@DiscriminatorValue("SECURED_WHOLESALE_FUNDING")
+/*@Entity
+@DiscriminatorValue("SECURED_WHOLESALE_FUNDING")*/
 public class SecuredWholesaleFunding extends CashOutflow implements Serializable {
 	
 	private static final long serialVersionUID = -5656561040459767109L;

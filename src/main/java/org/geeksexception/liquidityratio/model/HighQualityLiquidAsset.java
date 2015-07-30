@@ -17,8 +17,8 @@ import javax.persistence.Table;
 
 import org.geeksexception.liquidityratio.enums.HighQualityLiquidAssetLevel;
 
-@Entity
-@Table(name = "HIGH_QUALITY_LIQUID_ASSET")
+/*@Entity
+@Table(name = "HIGH_QUALITY_LIQUID_ASSET")*/
 public class HighQualityLiquidAsset implements Serializable {
 	
 	private static final long serialVersionUID = 5901421781866524929L;

@@ -1,7 +1,6 @@
 package org.geeksexception.liquidityratio.model;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
@@ -12,8 +11,8 @@ import javax.persistence.PrePersist;
 
 import org.geeksexception.liquidityratio.enums.UnsecuredWholesaleFundingType;
 
-@Entity
-@DiscriminatorValue("UNSECURED_WHOLESALE_FUNDING")
+/*@Entity
+@DiscriminatorValue("UNSECURED_WHOLESALE_FUNDING")*/
 public class UnsecuredWholesaleFunding extends CashOutflow implements Serializable {
 	
 	private static final long serialVersionUID = -5940942755269011062L;
@@ -27,11 +26,6 @@ public class UnsecuredWholesaleFunding extends CashOutflow implements Serializab
 	@PrePersist
 	public void prePersist() {
 		if(unsecuredWholesaleFundingType == null) unsecuredWholesaleFundingType = UnsecuredWholesaleFundingType.OPERATIONAL;
-		if(runOffRate == null) {
-			if(unsecuredWholesaleFundingType == UnsecuredWholesaleFundingType.OPERATIONAL) runOffRate = new BigDecimal("0.25");
-			else if(unsecuredWholesaleFundingType == UnsecuredWholesaleFundingType.NON_OPERATIONAL) runOffRate = new BigDecimal("0.4");
-			else if(unsecuredWholesaleFundingType == UnsecuredWholesaleFundingType.UNSECURED_DEBT) runOffRate = new BigDecimal("1.00");
-		}
 	}
 
 	public UnsecuredWholesaleFundingType getUnsecuredWholesaleFundingType() {

@@ -14,11 +14,11 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.Table;
 
-@Entity
+/*@Entity
 @Access(AccessType.FIELD)
 @Table(name = "CASH_OUTFLOW")
 @Inheritance
-@DiscriminatorColumn(name="CASH_OUTFLOW_TYPE")
+@DiscriminatorColumn(name="CASH_OUTFLOW_TYPE")*/
 public abstract class CashOutflow implements Serializable {
 	
 	private static final long serialVersionUID = 2665139265252766263L;
@@ -28,27 +28,13 @@ public abstract class CashOutflow implements Serializable {
 	@Column(name = "ID", nullable = false)
 	private Long id;
 	
-	@Column(name = "NAME", nullable = false)
-	private String name;
-	
 	@Column(name = "UNWEIGHTED_AMOUNT")
 	private BigDecimal unweightedAmount;
-	
-	@Column(name = "RUNOFF_RATE")
-	protected BigDecimal runOffRate;
 	
 	public CashOutflow() { }
 
 	public Long getId() {
 		return id;
-	}	
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public BigDecimal getUnweightedAmount() {
@@ -57,14 +43,6 @@ public abstract class CashOutflow implements Serializable {
 
 	public void setUnweightedAmount(BigDecimal unweightedAmount) {
 		this.unweightedAmount = unweightedAmount;
-	}
-
-	public BigDecimal getRunOffRate() {
-		return runOffRate;
-	}
-
-	public void setRunOffRate(BigDecimal runOffRate) {
-		this.runOffRate = runOffRate;
 	}
 
 }
