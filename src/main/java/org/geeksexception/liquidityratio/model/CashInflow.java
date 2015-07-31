@@ -14,11 +14,11 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.Table;
 
-@Entity
+/*@Entity
 @Access(AccessType.FIELD)
 @Table(name = "CASH_INFLOW")
 @Inheritance
-@DiscriminatorColumn(name="CASH_INFLOW_TYPE")
+@DiscriminatorColumn(name="CASH_INFLOW_TYPE")*/
 public class CashInflow implements Serializable {
 	
 	private static final long serialVersionUID = 2665139265252766263L;
