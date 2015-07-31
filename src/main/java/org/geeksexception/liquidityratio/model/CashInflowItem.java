@@ -8,19 +8,15 @@ import javax.persistence.AccessType;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import org.geeksexception.liquidityratio.enums.HighQualityLiquidAssetLevel;
-
 @Entity
 @Access(AccessType.FIELD)
-@DiscriminatorValue("HIGH_QUALITY_LIQUID_ASSET_ITEM")
-public class HighQualityLiquidAssetItem extends HighQualityLiquidAssetComponent implements Serializable {
+@DiscriminatorValue("CASH_INFLOW_ITEM")
+public class CashInflowItem extends CashInflowComponent implements Serializable {
 	
-	private static final long serialVersionUID = -1577296618754709025L;
+	private static final long serialVersionUID = -3276530233766819629L;
 	
 	@ManyToOne
 	@JoinColumn(name="NOTE_ID", nullable = false)
@@ -29,14 +25,9 @@ public class HighQualityLiquidAssetItem extends HighQualityLiquidAssetComponent 
 	@Column(name = "UNWEIGHTED_AMOUNT", nullable = false)
 	private BigDecimal unweightedAmount;
 	
-	@Column(name = "LEVEL", nullable = false)
-	@Enumerated(EnumType.STRING)
-	private HighQualityLiquidAssetLevel highQualityLiquidAssetLevel;
-	
-	public HighQualityLiquidAssetItem(Note note, BigDecimal unweightedAmount, HighQualityLiquidAssetLevel highQualityLiquidAssetLevel) {
+	public CashInflowItem(Note note, BigDecimal unweightedAmount) {
 		this.note = note;
 		this.unweightedAmount = unweightedAmount;
-		this.highQualityLiquidAssetLevel = highQualityLiquidAssetLevel;
 	}
 	
 	@Override
@@ -55,11 +46,6 @@ public class HighQualityLiquidAssetItem extends HighQualityLiquidAssetComponent 
 	}
 	
 	@Override
-	public HighQualityLiquidAssetLevel getHighQualityLiquidAssetLevel() {
-		return highQualityLiquidAssetLevel;
-	}
-	
-	@Override
 	public BigDecimal getUnweightedAmount() {
 		return unweightedAmount;
 	}
@@ -69,4 +55,12 @@ public class HighQualityLiquidAssetItem extends HighQualityLiquidAssetComponent 
 		return unweightedAmount.multiply(note.getWeight());
 	}
 
+	@Override
+	public String toString() {
+		return "CashInflowItem [getId()=" + getId() + ", getName()="
+				+ getName() + ", getUnweightedAmount()="
+				+ getUnweightedAmount() + ", getWeightedAmount()="
+				+ getWeightedAmount() + "]";
+	}
+	
 }

@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 
 @Entity
 @Access(AccessType.FIELD)
-@DiscriminatorValue("CASH_OUTFLOW_ITEMS")
+@DiscriminatorValue("CASH_OUTFLOW_ITEM")
 public class CashOutflowItem extends CashOutflowComponent implements Serializable {
 	
 	private static final long serialVersionUID = 7148567126490568040L;
